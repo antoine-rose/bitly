@@ -1,0 +1,32 @@
+{% extends 'home/index.html' %}
+
+{% block historic %}
+<div class="link-container mid-container">
+    <div id="shortened_info">
+        <ul id="most_recent_link" class="anon_history footroom">
+        </ul>
+    </div>
+    <div>
+        <ul id="anon_history" class="anon_history" style="display: block; overflow: hidden;">
+            <li id="2iGT7U9" class="shortened_link" data-user_hash="{{short_url}}" data-short_link="{{short_url}}">
+                <div class="unauth-title">
+                    <span class="article-title">Shortened link</span>
+                </div>
+                <div class="unauth-title-url">
+                    <a class="article-title smaller" href="{{shortened_url}}">{{shortened_url}}</a>
+                </div>
+                <div class="unauth_capsule clearfix">
+                    <a class="short-url" href="/{{short_url}}">{{domain_name}}{{short_url}}</a>
+                    <input class="copy-input" value="{{domain_name}}{{short_url}}" tabindex="-1" readonly="">
+                    <span class="info_page"><i class="default fa fa-bar-chart-o"></i> {{visit_count}}</span>
+                </div>
+            </li>
+            <!--<div class="signup-promotion hide-on-new-shorten">-->
+                <!--<span class="signup-tagline">Keep track of all your links and how they travel across the web. </span>-->
+                <!--<a href="/a/sign_up" class="sign-up-link sign-up-post-shorten">Sign Up For Free <i class="orange-arrow-small"></i></a>-->
+                <!--<a class="header-login sign-up-post-shorten" href="/a/sign_up">Sign Up For Free</a>-->
+            <!--</div>-->
+        </ul>
+    </div>
+</div>
+{% endblock %}
